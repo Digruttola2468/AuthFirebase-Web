@@ -1,14 +1,10 @@
-const signInform = document.querySelector("#registrarse");
+const signInForm = document.querySelector("#login");
 
-signInform.addEventListener('submit', e => {
+signInForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    const nombre = signInform['regis-name'].value;
-    const apellido = signInform['regis-apellido'].value;
-    const email = signInform['regis-email'].value;
-    const password = signInform['regis-password'].value;
-    const reptPassword = signInform['regis-rept-password'].value;
+    const email = signInForm['login-email'].value;
+    const password = signInForm['login-password'].value;
 
-    console.log(`El usuario ${nombre} ${apellido} se ha registrado 
-    con el email: ${email}`);
+    console.log(`El usuario ${email} ha iniciado Sesion donde su contraseña es: ${password}`);
 })
