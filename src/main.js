@@ -1,2 +1,3 @@
-import './app/firebase.js'
+import './app/signinForm.js';
+import './app/signupForm.js';
 
