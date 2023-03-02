@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-import { auth } from './firebase.js'
-
+import { auth } from './firebase.js';
+import { showMessage } from './showMessage.js';
 
 const signUpform = document.querySelector("#registrarse");
 
@@ -16,17 +16,19 @@ signUpform.addEventListener('submit', async e => {
     try {
         const userCredentials = await createUserWithEmailAndPassword(auth, email, password);
         console.log(userCredentials);
-        
+
+        showMessage("Se creo Correctamente", "success");
+
     } catch (error) {
         console.log(error.message);
         console.log(error.code);
 
-        switch(error.code) {
-            case 'auth/weak-password': 
-                alert("La contraseña es muy debil");
+        switch (error.code) {
+            case 'auth/weak-password':
+                showMessage("La contraseña es muy debil","error");
                 break;
-            case 'auth/network-request-failed': 
-                alert("Error en el Email")
+            case 'auth/network-request-failed':
+                showMessage("Error en el Email","error")
                 break;
         }
     }
