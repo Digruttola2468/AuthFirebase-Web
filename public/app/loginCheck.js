@@ -4,10 +4,12 @@ const containerInciadoSesion = document.querySelector(".containerInciadoSesion")
 
 export const loginCheck = user => {
     if(user) {
-        containerLogin.classList.toggle("ocultar")
-        containerRegistrarse.classList.toggle("ocultar");
+        console.log("Mostrar")
+        containerLogin.classList.add("ocultar")
+        containerRegistrarse.classList.add("ocultar");
         containerInciadoSesion.classList.remove("ocultar");
     }else {
+        console.log("ocultar")
         containerLogin.classList.remove("ocultar")
         containerRegistrarse.classList.remove("ocultar");
         containerInciadoSesion.classList.add("ocultar");
