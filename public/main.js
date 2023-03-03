@@ -5,6 +5,7 @@ import './app/signupForm.js'
 import './app/signinForm.js'
 import './app/logout.js'
 import './app/postList.js'
+import './app/googleLogin.js'
 import { auth, db } from "./app/firebase.js";
 import { loginCheck } from "./app/loginCheck.js";
 import { setupPosts } from "./app/postList.js";
