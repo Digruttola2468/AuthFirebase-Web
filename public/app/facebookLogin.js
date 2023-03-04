@@ -11,7 +11,7 @@ facebookBoton.addEventListener("click", async (e) => {
   try {
     const credentials = await signInWithPopup(auth, provider);
     console.log(credentials);
-    console.log("google sign in");
+    console.log("Facebook sign in");
     
     // Close the login modal
     const modalInstance = bootstrap.Modal.getInstance(googleButton.closest('.modal'));
