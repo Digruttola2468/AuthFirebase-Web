@@ -13,3 +13,10 @@ button {
 .ocultar {
     display: none;
 }
+
+.BorderRed {
+    border: 1px solid red;
+}
+.borderGreen {
+    border: 1px solid greenyellow;
+}
