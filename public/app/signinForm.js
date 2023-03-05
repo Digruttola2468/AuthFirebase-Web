@@ -18,8 +18,11 @@ async function iniciarSesion(email,password){
         await signInWithEmailAndPassword(auth,email,password);
 
         const user = auth.currentUser;
-        if(user.emailVerified)
+        if(user.emailVerified){
             showMessage("Iniciado Correctamente","success");
+            window.location.reload();
+        }
+            
         else showMessage("El email no esta verificado","error");
     } catch (error) {
         console.log(error.code);
