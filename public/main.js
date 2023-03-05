@@ -12,21 +12,15 @@ import './app/googleLogin.js'
 import './app/facebookLogin.js'
 import './app/githubLogin.js'
 import './app/logout.js'
+import { showMessage } from "./app/showMessage.js";
 
 // list for auth state changes
 onAuthStateChanged(auth, async (user) => {
   if (user) {
-    console.log(user);
-    console.log("Bienvenido: " + user.displayName);
-    loginCheck(user);
-    try {
-      const querySnapshot = await getDocs(collection(db, "posts"));
-      //setupPosts(querySnapshot.docs);
-    } catch (error) {
-      console.log(error)
+    if(user.emailVerified){
+      console.log("Bienvenido: " + user.displayName);
+      loginCheck(user);
     }
-  } else {
-    //setupPosts([]);
   }
 });
 

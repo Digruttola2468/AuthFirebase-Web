@@ -16,7 +16,11 @@ signInForm.addEventListener('submit', async e => {
 async function iniciarSesion(email,password){
     try {
         await signInWithEmailAndPassword(auth,email,password);
-        showMessage("Iniciado Correctamente","success");
+
+        const user = auth.currentUser;
+        if(user.emailVerified)
+            showMessage("Iniciado Correctamente","success");
+        else showMessage("El email no esta verificado","error");
     } catch (error) {
         console.log(error.code);
         switch(error.code) {
