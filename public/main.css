@@ -2,21 +2,55 @@
     font-family: Calibri, sans-serif;
 }
 
-input {
-    margin: 5px;
+main {
+    max-width: 900px;
+    margin: auto;
 }
 
-button {
-    margin: 5px;
+h1,h2 {
+    text-align: center;
 }
 
 .ocultar {
     display: none;
 }
-
 .BorderRed {
     border: 1px solid red;
 }
 .borderGreen {
     border: 1px solid greenyellow;
+}
+
+.containerLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#login {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-bottom: 30px;
+}
+#login input {
+    margin-bottom: 5px;
+}
+.buttonLogin {
+    display: flex;
+    flex-direction: column;
+}
+.buttonLogin button {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+#registrarse {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: repeat(5 , 30px);
+    place-content: center;
+    gap: 5px;
+}
+#regis-email,#regis-password,#regis-rept-password,button {
+    grid-column: 1 / 3;
 }

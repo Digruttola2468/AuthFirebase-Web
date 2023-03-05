@@ -11,39 +11,45 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body> 
-    <h1>Firebase Auth Web</h1>
 
-    <div class="containerRegistrarse">
-        <h2>Registrarse</h2>
-        <form action="" id="registrarse">
-            <input type="text" id="regis-name" placeholder="Nombre">
-            <input type="text" id="regis-apellido" placeholder="Apellido">
-            <input type="text" id="regis-email" placeholder="Email">
-            <input type="password" id="regis-password" placeholder="Password">
-            <input type="password" id="regis-rept-password" placeholder="Repeat Password">
-            <button>Registrarse</button>
-        </form>
-    </div>
-    
-    <div class="containerLogin">
-        <h2 onclick="">Iniciar Sesion</h2>
-        <form action="" id="login">
-            <input type="email" id="login-email" placeholder="Email">
-            <input type="password" id="login-password" placeholder="Password">
-            <button>Iniciar Sesion</button>
-        </form>
-        <button id="googleLogin">Google</button>
-        <button id="facebookLogin">Facebook</button>
-        <button id="githubLogin">GitHub</button>
-    </div>
-    
-    <div class="containerInciadoSesion ocultar">
-        <div class="iniciadoSesion">
-            Bienvenido Usuario , aca tenes mi verga juajuajuajua
-            <button id="LogOut">LogOut</button>
+    <main>
+        <h1>Firebase Auth Web</h1>
+
+        <div class="containerRegistrarse">
+            <h2>Registrarse</h2>
+            <form action="" id="registrarse">
+                <input type="text" id="regis-name" placeholder="Nombre">
+                <input type="text" id="regis-apellido" placeholder="Apellido">
+                <input type="text" id="regis-email" placeholder="Email">
+                <input type="password" id="regis-password" placeholder="Password">
+                <input type="password" id="regis-rept-password" placeholder="Repeat Password">
+                <button>Registrarse</button>
+            </form>
         </div>
         
-    </div>
+        <div class="containerLogin">
+            <h2 onclick="">Iniciar Sesion</h2>
+            <form action="" id="login">
+                <input type="email" id="login-email" placeholder="Email">
+                <input type="password" id="login-password" placeholder="Password">
+                <button>Iniciar Sesion</button>
+            </form>
+            <div class="buttonLogin">
+                <button id="googleLogin">Google</button>
+                <button id="facebookLogin">Facebook</button>
+                <button id="githubLogin">GitHub</button>
+            </div>
+        </div>
+        
+        <div class="containerInciadoSesion ocultar">
+            <div class="iniciadoSesion">
+                Bienvenido Usuario , aca tenes mi verga juajuajuajua
+                <button id="LogOut">LogOut</button>
+            </div>
+            
+        </div>
+    </main>
+    
 
     <script src="./main.js" type="module"></script>
 
