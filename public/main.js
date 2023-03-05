@@ -31,3 +31,16 @@ onAuthStateChanged(auth, async (user) => {
 });
 
 
+const eyePasswordLogin = document.querySelector(".eyeLogin");
+const loginPassword = document.querySelector("#login-password")
+eyePasswordLogin.addEventListener('click', e => {
+  e.preventDefault();
+
+  eyePasswordLogin.classList.toggle("fa-eye");
+  eyePasswordLogin.classList.toggle("fa-eye-slash");
+  
+  if(eyePasswordLogin.classList.contains("fa-eye"))loginPassword.type = "password";
+  else loginPassword.type = "text";
+  
+});
+

@@ -11,7 +11,14 @@ h1,h2 {
     text-align: center;
 }
 
+i {
+    padding-right: 5px;
+}
+
 .ocultar {
+    display: none;
+}
+.ocultar div{
     display: none;
 }
 .BorderRed {
@@ -21,30 +28,8 @@ h1,h2 {
     border: 1px solid greenyellow;
 }
 
-.containerLogin {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#login {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    margin-bottom: 30px;
-}
-#login input {
-    margin-bottom: 5px;
-}
-.buttonLogin {
-    display: flex;
-    flex-direction: column;
-}
-.buttonLogin button {
-    width: 200px;
-    margin-bottom: 15px;
-}
-
 #registrarse {
+    position: relative;
     display: grid;
     grid-template-columns: 100px 100px;
     grid-template-rows: repeat(5 , 30px);
@@ -53,4 +38,48 @@ h1,h2 {
 }
 #regis-email,#regis-password,#regis-rept-password,button {
     grid-column: 1 / 3;
+}
+
+.containerLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#login {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-bottom: 30px;
+}
+#login input {
+    height: 24px;
+    margin-bottom: 5px;
+}
+#login button {
+    height: 30px;
+}
+.buttonLogin {
+    display: flex;
+    flex-direction: column;
+}
+.buttonLogin button {
+    width: 200px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.eyeLogin {
+    position: absolute; 
+    top: 42px;
+    left: calc(100% - 30px);
+}
+#facebookLogin {
+    background: #14a1f9;
+}
+#githubLogin {
+    color: white;
+    background-color: black;
 }
