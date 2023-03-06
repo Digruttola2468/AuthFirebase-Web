@@ -39,6 +39,7 @@ async function createUser(email, password) {
         sendEmailVerification(auth.currentUser)
         .then(() => {
             showMessage("Se envio un Email Verification", "success");
+            window.open("./sendEmailVerification.html");
         });
 
         showMessage("Se creo Correctamente", "success");
